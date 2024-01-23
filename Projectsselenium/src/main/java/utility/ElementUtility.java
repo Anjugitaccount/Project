@@ -57,5 +57,11 @@ public class ElementUtility {
 			return counter;
 		}
 	 //create methods for dropdown,radiobutton,checkbox,draganddrop
-	
+	 public void dateSelect(WebElement element,String dateValue) {
+
+			JavascriptExecutor js=(JavascriptExecutor)driver;
+
+			js.executeScript("arguments[0].setAttribute('value','"+dateValue+"');", element);
+
+		}
 }

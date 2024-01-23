@@ -111,16 +111,16 @@ public class Items {
 		waitutility.clickable(search);
 		search.sendKeys(searchname);
 
-		By locator=By.xpath("//table[@id='client-table']//tbody//tr//td//a[contains(text(),'"+searchname+"')]");
+		By locator=By.xpath("//table[@id='item-table']//tbody//tr//td[contains(text(),'"+searchname+"')]");
 		waitutility.visibility(locator);
-		List<WebElement> itemtable=driver.findElements(By.xpath("//table[@id='client-table']//tbody//tr//td//a[contains(text(),'"+searchname+"')]"));
+		List<WebElement> itemtable=driver.findElements(By.xpath("//table[@id='item-table']//tbody//tr//td[contains(text(),'"+searchname+"')]"));
 		waitutility.visibility(itemtable);
 	int row=elementutility.getTableDataRowCount(itemtable, searchname);
 
 		String actualmsg="";//local variable need to initialise
 		if(row!=0) 
 		{
-			WebElement tableRow=driver.findElement(By.xpath("//table[@id='client-table']//tbody//tr["+row+"]//td[2]"));
+			WebElement tableRow=driver.findElement(By.xpath("//table[@id='item-table']//tbody//tr["+row+"]//td[1]"));
 			actualmsg=tableRow.getText();
 			System.out.println("VerifySearch "  +actualmsg);
 		}

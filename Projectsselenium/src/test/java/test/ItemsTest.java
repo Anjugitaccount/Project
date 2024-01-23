@@ -16,8 +16,8 @@ public class ItemsTest extends BaseTest{
 		 boolean retrnvalue= si.doSingin("admin@admin.com", "12345678");
 		 Assert.assertTrue(retrnvalue);
 	  Items item=new Items(driver);
-	  String actual=item.addIteam("obsquraTest4","project","automation","10");
-	  String expected="obsquraTest4";
+	  String actual=item.addIteam("obsquraTest51","project","automation","10");
+	  String expected="obsquraTest51";
 	  Assert.assertEquals(actual,expected);
 	  
   }
@@ -28,8 +28,8 @@ public class ItemsTest extends BaseTest{
 		 Assert.assertTrue(retrnvalue);
 	  Items item=new Items(driver);
 	  item.clickIteam();
-	  String actual=item.searchIteam("obsquraTest4");
-	  String expected="obsquraTest4";
+	  String actual=item.searchIteam("obsquraTest51");
+	  String expected="obsquraTest51";
 	  Assert.assertEquals(actual,expected);
 	  
   }
@@ -40,8 +40,8 @@ public class ItemsTest extends BaseTest{
 		 Assert.assertTrue(retrnvalue);
 		  Items item=new Items(driver);
 		  item.clickIteam();
-		 String actual= item.editIteam("obsquraTest4","obsqura_Test5");
-		 String expected="obsqura_Test5";
+		 String actual= item.editIteam("obsquraTest51","obsqura_Test61");
+		 String expected="obsqura_Test61";
 		 Assert.assertEquals(actual,expected);
   }
   @Test(priority=4,groups= {"regression"})
@@ -50,7 +50,7 @@ public class ItemsTest extends BaseTest{
 	  boolean retrnvalue= si.doSingin("admin@admin.com", "12345678");
 		 Assert.assertTrue(retrnvalue);
 		 Items item=new Items(driver);
-	  String actual=item.deleteIteam("obsqura_Test5");
+	  String actual=item.deleteIteam("obsqura_Test61");
 	  String expected="No record found.";
 	  Assert.assertEquals(actual,expected);
  }

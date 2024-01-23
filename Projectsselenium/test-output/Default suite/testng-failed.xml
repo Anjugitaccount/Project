@@ -5,9 +5,7 @@
     <classes>
       <class name="test.ItemsTest">
         <methods>
-          <include name="verifyEditItems"/>
-          <include name="verifyItems"/>
-          <include name="verifySerch"/>
+          <include name="verifyDeleteItems"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
         </methods>
